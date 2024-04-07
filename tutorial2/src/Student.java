@@ -22,9 +22,24 @@ public class Student {
             for(int i=0;i<=grades.length; i++){
                 wynik +=grades[i];
             }
+            wynik = wynik/grades.length
+        }
+        if(wynik <= 2.5 ){
+            wynik = 2.5;
+        }else if(wynik <=2.5 && wynik >= 3.01){
+            wynik = 3;
+        }else if(wynik <=3.01 && wynik >= 3.99){
+            wynik = 3.5;
+        }
+        else if(wynik <= 4.00 && wynik >= 4.5){
+            wynik = 4;
+        }else if(wynik <= 4.01 && wynik >= 4.99){
+            wynik = 4.5;
+        }else if(wynik <= 5){
+            wynik = 5;
         }
 
-        return Math.round(wynik = wynik/grades.length);
+        return wynik;
     }
 
 }
